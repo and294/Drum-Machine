@@ -32,7 +32,7 @@ input[type="range"] {
 .top {
   color: #27c4c4;
   font-family: "Russo One", sans-serif;
-  border: 2px solid /*lighten(#1f333b, 10%)*/;
+  border: 2px solid rgb(93, 118, 128);
   border-radius: 5px;
   margin: 2px;
   padding: 10px;
@@ -126,7 +126,7 @@ p {
 }
 
 .leftPad {
-  border: 2px solid rgb(121, 155, 168)/*lighten(#1f333b, 10%)*/;
+  border: 2px solid rgb(93, 118, 128);
   border-radius: 5px;
   @media (max-width: 640px) {
     width: 45vw;
@@ -228,7 +228,7 @@ p {
   padding: 5px;
   background-color: #1f333b;
   background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
-  border: 2px solid /*lighten(#1f333b, 10%)*/;
+  border: 2px solid rgb(93, 118, 128);
 }
 
 .drum-pad {
