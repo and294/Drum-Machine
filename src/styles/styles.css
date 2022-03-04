@@ -1,25 +1,268 @@
-/* a minimalist set of CSS resets */
 
-/* default to border-box */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
+
+body, html{
+  height: 100%;
+  background-color: #181b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background-color: #c19a6b;
+background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+input[type=range] {
+  -webkit-appearance: nonz;
+
 }
 
-/* adjust typography defaults */
-body {
-  margin: 1rem;
-  font-family: sans-serif;
-  line-height: 1.5;
+
+#drum-machine {
+  background-color: #1f333b;
+background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
+  width: 700px;
+  left: 50%;
+  margin-top: 10vh;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 2px darken(#181b1b, 20%);
+  display: inline-block;
+  padding: 1em;
+  left: auto;
+  margin: 10px ;
+  @media (max-width: 800px){
+    width: 90vw;
+  
+  }
+  
+  .top {
+    color: #27c4c4;
+    font-family: 'Russo One', sans-serif;
+    border: 2px solid lighten(#1f333b, 10%);
+    border-radius: 5px;
+    margin: 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+     @media (max-width: 800px){
+     width: 83vw;
+    
+  }
+    
+    .bank {
+      padding-right: -70px;
+      margin-right: -190px;
+     display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+       @media (max-width: 800px){
+   padding-right: 55vw;
+    
+  }
+      
+      p {
+        margin-bottom: 0px;
+        color: darken(#1f333b, 15%);
+        @media (max-width: 800px){
+   margin-bottom: 25px;
+        }
+      }
+      
+      .bankSlider {
+        background-color: #161617;
+        box-shadow: inset 0px 0px 1px 1px darken(#161617, 20%);
+        border-radius: 2px;
+        margin-top: 9px;
+        width: 60px;
+        height: 25px;
+      }
+      
+      .bankSlider::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 2em; height: 23px;
+        border: 1px solid darken(#2d2f31, 20%);     
+        background: linear-gradient(90deg, #222224 3px, #222224 7px);
+         background-position: 50%;
+ background-repeat: repeat-y;
+    background-size: 10px auto;
+      }
+      
+     }
+      
+    }
+   
+ 
+}
+    
+    .p{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-around;
+    }
+    
+    
+    .power {
+      color: grey;
+      background-color: #2d2f31;
+      background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
+      position: relative;
+      height: auto;
+      padding: 10px;
+      border-radius: 50px;
+      box-shadow: 1px 1px 3px 2px darken(#2d2f31, 10%);
+      align-self: center;
+    }
+    .power:active {  
+  background: radial-gradient(circle at center, #1f2021 0, #1f2021, #2d2f31 100%); 
+    }
+    
+    .powerIndic {
+      background-color: #4d0000;
+      box-shadow: inset 0px 0px 1px 1px darken(#4d0000, 20%);
+      height: 15px;
+      width: 15px;
+      border-radius: 50px;
+      align-self: center;
+    }
+    
+  
+  
+  .bottom {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr 2fr;
+    
+  }
+
+
+.leftPad{
+ border: 2px solid lighten(#1f333b, 10%);
+ border-radius: 5px;
+  @media (max-width: 640px){
+    width: 45vw;
+  } 
 }
 
-/* images and videos max out at full width */
-img,
-video {
+#display {
+  background-color: #33582f;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: darken(#33582f, 20%);
+  box-shadow: inset 1px 1px 5px 2px darken(#181b1b, 20%);
+  margin: 4px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 5px;
+   @media (max-width: 640px){
+    font-size: 20px;
+  } 
+}
+
+
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: none;
+  width: 4em; height: 2em;
+  border-radius: .5em;
+  box-shadow:
+     1px 1px 3px 2px black;
+  background: 
+    radial-gradient(#808b96 10%, rgba(#566573, .2) 10%, rgba(#566573, 0) 72%) 
+      no-repeat 50% 50%, 
+    radial-gradient(#{at 100% 50%}, #566573, #2c3e50 71%, transparent 71%) 
+      no-repeat (4em - 2*.75em) 50%, 
+    linear-gradient(90deg, #566573, #808b96) no-repeat 100% 50%,
+    radial-gradient(#{at 0 50%}, #566573, #2c3e50 71%, transparent 71%) 
+      no-repeat .75em 50%, 
+    linear-gradient(90deg,  #808b96 , #566573) no-repeat 0 50%,
+    linear-gradient(   #566573 ,  #808b96 ,  #808b96 ,    #566573   );
+  background-size: 1.1*.75em 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 200px; height: 10px;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: .1875em;
+  box-shadow: inset 0px 0px 1px 2px lighten(#181b1b, 10%);
+  background: black;
+  @media (max-width: 640px){
+    width: 40vw;
+  } 
+}
+
+.speaker {  
+  margin-top: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
+  .lines{
+  border-color: lighten(black, 25%);
+  background-color: black;
+  height: 1px;  
+  }
+  #l7{
+    width: 90%;
+  }
+  #l6{
+    width: 85%;
+  }
+  #l5{
+     width: 80%;
+  }
+  #l4{
+     width: 70%; 
+  }
+  #l3{
+    width: 55%;
+  }
+  #l2{
+    width: 45%;
+  }
+  #l1{
+    width: 25%;
+  }
+}
+
+#pads {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  display: inlive-block;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #1f333b;
+background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png"); 
+  border: 2px solid lighten(#1f333b, 10%)
+}
+
+.drum-pad {
+  
+  background-color: #da9f4a;
+  color: darken(#da9f4a, 45%);
+  font-family: 'Oswald', sans-serif;
   height: auto;
-  max-width: 100%;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  vertical-align: center;
+  align-content: space-between;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 2px darken(#1f333b, 10%);
+  flex: 1 1 25%;
+  cursor: pointer;
+  @media (max-width: 640px){
+    font-size: 1vh;
+  } 
+  
+}
+
+.drum-pad:active {
+  
+  box-shadow: inset 1px 1px 5px 2px darken(#da9f4a, 30%);
+  background: radial-gradient(circle at center, #A97122 0, #da9f4a, #da9f4a 100%);
 }
