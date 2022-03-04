@@ -65,7 +65,7 @@ p {
 
 .bankSlider {
   background-color: #161617;
-  box-shadow: inset 0px 0px 1px 1px darken(#161617, 20%);
+  box-shadow: inset 0px 0px 1px 1px /*darken(#161617, 20%)*/;
   border-radius: 2px;
   margin-top: 9px;
   width: 60px;
@@ -76,7 +76,7 @@ p {
   -webkit-appearance: none;
   width: 2em;
   height: 23px;
-  border: 1px solid darken(#2d2f31, 20%);
+  border: 1px solid /*darken(#2d2f31, 20%)*/;
   background: linear-gradient(90deg, #222224 3px, #222224 7px);
   background-position: 50%;
   background-repeat: repeat-y;
